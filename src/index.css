@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "open-sans", sans-serif;
+}
+
+body {
+    background-color: green;
+}
+
+
+.nav {
+    font-size: 11px;
+    font-weight: 600;
+}
+.nav-link {
+    color: black
+}
+.nav-link:hover {
+    color: currentColor
+}
+
