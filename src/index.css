@@ -5,6 +5,11 @@
     font-family: "open-sans", sans-serif;
 }
 
+
+a {
+    color: white;
+    text-decoration: none;
+}
 body {
     background-color: green;
 }
@@ -13,6 +18,7 @@ body {
 .nav {
     font-size: 11px;
     font-weight: 600;
+    
 }
 .nav-link {
     color: black
@@ -21,3 +27,36 @@ body {
     color: currentColor
 }
 
+.content {
+    padding: 3rem 0 ;
+    color: white;
+}
+
+.services-list {
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+
+    .services-list-items {
+        display: flex;
+        align-items: center;
+
+        div {
+            width: 60px;
+            margin-right: 1rem;
+            
+
+            img {
+                width: 100%;
+                height: 65px;
+                /* height: 50px; */
+            }
+        }
+        
+    }
+
+  
+}
