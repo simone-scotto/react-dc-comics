@@ -33,7 +33,7 @@ export default function Main () {
                 <div className="row row-cols-6 g-4">
                     {comics.map((comic) => (
                         
-                            <div className="comic-card">
+                            <div className="comic-card text-light">
                                 <div className="comic-card-head">
                                     <img className="img-fluid" src={comic.thumb} alt="comic"/></div>
                                 <div className="comic-card-body">{comic.series}</div>
@@ -106,7 +106,7 @@ export default function Main () {
                         </ul>
                     </div>
                     <div className="dc-backbround">
-                        <img src="./img/dc-logo-bg-png" alt="sddc" />
+                        <img src="/img/dc-logo-bg.png" alt="sddc" />
                         
                     </div>
                 </div>

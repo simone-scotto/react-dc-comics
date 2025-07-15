@@ -12,7 +12,7 @@ a {
     text-decoration: none;
 }
 body {
-    background-color: green;
+    background-color: rgba(0, 0, 0, 0.882);
 }
 
 ul {
@@ -106,11 +106,12 @@ section.comics {
     background-image: url(../img/footer-bg.jpg);
     background-size: cover;
     height: 400px;
-    position: relative;
+    
 
     .container {
         
         height: 100%;
+        display: flex;
         
 
         .closing-lists {
@@ -119,29 +120,53 @@ section.comics {
         flex-wrap: wrap;
         
         height: 100%;
-        width: 30%;
+        width: 100%
         
         }
     }
    .dc-backbround {
         
         height: 100%;   
-        width: 400px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 1;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+       
         img {
             
             
-            background-size: cover;
-            height: 100%;   
-            width: 30%;
+            object-fit: cover;
+            scale: 110%;
             position: absolute;
-            right: 0;
-            top: 0;
-            z-index: 1;
+            right: 57px;
+            top: -74px;
+            
             }
         }
     }
 
+
+
+    /* footer */
+footer {
+    background-color: gray;
+    height: 100px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        .sign-up {
+            border: 2px solid blue;
+            padding: 0.5rem 1rem;
+        }
+
+
+        .social-list>a {
+            
+            text-decoration: none;
+            padding: 0 0.3rem;
+        }
+    }
+}
