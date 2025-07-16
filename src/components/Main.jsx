@@ -2,8 +2,10 @@
 
 import comics from "../db/comics"
 import services from "../db/services"
+import closingLists from "../db/closinglLists";
 import ComicCard from  "./ComicCard"
 import ServiceList from "./ServiceList";
+import ClosingLists from "./ClosingLists";
 
 
 
@@ -52,44 +54,50 @@ export default function Main () {
 
                
                     <div className="closing-lists text-light">
-                        <ul>
-                            <li><h4 className="text-uppercase">dc comics</h4></li>
-                            <li>Characters</li>
-                            <li>Comics</li>
-                            <li>Movies</li>
-                            <li>TV</li>
-                            <li>Games</li>
-                            <li>Videos</li>
-                            <li>news</li>
-                            
+                        {closingLists.map (({id, title, liItems}) => {
+                            return <ClosingLists key={id} title={title} liItems={liItems}/>
+                        })}
+                        {/* <ul>
+                            <li><h4 class="text-uppercase">dc comics</h4></li>
+                            <li><a href="#">Characters</a></li>
+                            <li><a href="#">Comics</a></li>
+                            <li><a href="#">Movies</a></li>
+                            <li><a href="#">TV</a></li>
+                            <li><a href="#">Games</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">News</a></li>
                         </ul>
+
                         <ul>
-                            <li><h4 className="text-uppercase">shop</h4></li>
-                            <li>Shop DC</li>   
-                            <li>Shop DC Collectibles</li>                   
-                        </ul>
+                            <li><h4 class="text-uppercase">shop</h4></li>
+                            <li><a href="#">Shop DC</a></li>
+                            <li><a href="#">Shop DC Collectibles</a></li>
+                            </ul>
+
                         <ul>
-                            <li><h4 className="text-uppercase">dc</h4></li>
-                            <li>Terms Of Use</li>
-                            <li>Privacy Policy (New)</li>
-                            <li>Ad Choiices</li>
-                            <li>Advertising</li>
-                            <li>Jobs</li>
-                            <li>Subscriptions</li>
-                            <li>Talent Workshops</li>
-                            <li>CPSC Certificates</li>
-                            <li>Ratings</li>
-                            <li>Shop Help</li>
-                            <li>Contact Us</li>
-                        </ul>
+                            <li><h4 class="text-uppercase">dc</h4></li>
+                            <li><a href="#">Terms Of Use</a></li>
+                            <li><a href="#">Privacy Policy (New)</a></li>
+                            <li><a href="#">Ad Choices</a></li>
+                            <li><a href="#">Advertising</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Subscriptions</a></li>
+                            <li><a href="#">Talent Workshops</a></li>
+                            <li><a href="#">CPSC Certificates</a></li>
+                            <li><a href="#">Ratings</a></li>
+                            <li><a href="#">Shop Help</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            </ul>
+
                         <ul>
-                            <li><h4 className="text-uppercase">sites</h4></li>
-                            <li>DC</li>
-                            <li>MAD Magazine</li>
-                            <li>DC Kids</li>
-                            <li>DC Universe</li> 
-                            <li>DC Power Visa</li>                         
-                        </ul>
+                            <li><h4 class="text-uppercase">sites</h4></li>
+                            <li><a href="#">DC</a></li>
+                            <li><a href="#">MAD Magazine</a></li>
+                            <li><a href="#">DC Kids</a></li>
+                            <li><a href="#">DC Universe</a></li>
+                            <li><a href="#">DC Power Visa</a></li>
+                        </ul> */}
+
                     </div>
                     <div className="dc-backbround">
                         <img src="/img/dc-logo-bg.png" alt="sddc" />
