@@ -2,8 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "open-sans", sans-serif;
+    font-family: "open sans", sans-serif;
 }
+
+
 
 /* commons */
 
@@ -18,7 +20,7 @@ body {
 ul {
     list-style: none;
     padding-left: 0;
-    width: 30%;
+   
 }
 
 h3 {
@@ -45,6 +47,17 @@ h3 {
     background-image: url(../img/jumbotron.jpg);
     background-size: cover;
     height: 400px;
+    position: relative;
+
+    .lable {
+        padding: 0.5rem 1rem;
+        background-color: blue;
+        color: white;
+        position: absolute;
+        top: 95%;
+        left: 15%;
+
+    }
 }
 
 
@@ -101,6 +114,17 @@ section.comics {
         } 
     }
 }
+
+.card-lable {
+        margin-top: 5rem;
+        padding: 0.5rem 1rem;
+        background-color: blue;
+        color: white;
+        
+        
+    }
+
+
 
 .lists-section {
     background-image: url(../img/footer-bg.jpg);

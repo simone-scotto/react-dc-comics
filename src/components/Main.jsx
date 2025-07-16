@@ -1,23 +1,32 @@
 const services = [{
+    id: 1,
     src:"/img/buy-comics-digital-comics.png",
     title:  "digital comics"
 }
 ,{
+    id: 2,
     src: `/img/buy-comics-merchandise.png`,
     title:  "dc merchandise"
 },{
+    id: 3,
     src:"/img/buy-comics-shop-locator.png",
     title:  "subscription"
 },{
+    id: 4,
     src:"/img/buy-comics-subscriptions.png",
     title:  "digital comics"
 },{
+    id: 5,
     src:"/img/buy-dc-power-visa.svg",
     title:  "comic shop locator"
 }]
 
 
 import comics from "../db/comics"
+import ComicCard from  "./ComicCard"
+
+
+
 
 
 
@@ -27,34 +36,36 @@ export default function Main () {
     return (
         <main>
             <section className="jumbo ">
-
+                <span className="lable">current series</span>
             </section>
             <section className="comics container">
                 <div className="row row-cols-6 g-4">
-                    {comics.map((comic) => (
+                    {comics.map(({id, thumb, series}) => {
+
+                        return <ComicCard key={id} thumb={thumb} series={series} />                                              
+                                    
+                    })}
+
                         
-                            <div className="comic-card text-light">
-                                <div className="comic-card-head">
-                                    <img className="img-fluid" src={comic.thumb} alt="comic"/></div>
-                                <div className="comic-card-body">{comic.series}</div>
-                            </div>
-                            
-                            
-                        
-                        ))}
                     
                 </div>
+
+                <span className="card-lable">current series</span>
             </section>
+        {/*     <TestComponents name= "simone">
+
+</TestComponents> */}
             <section className="bg-primary">
                 <div className="container">
                     <ul className="services-list">
                         
 
-                            {services.map((service) => (
-                                <li className="services-list-items"><a href="#">
-                                   <img src={service.src} alt="#" /> 
-                                    {service.title}
-                                </a>
+                            {services.map(({id, src, title}) => (
+                                <li className="services-list-items" key={id}>
+                                    <a href="#">
+                                        <img src={src} alt="#" /> 
+                                        {title}
+                                    </a>
 
                                 </li>
                             ))}
@@ -76,6 +87,7 @@ export default function Main () {
                             <li>Games</li>
                             <li>Videos</li>
                             <li>news</li>
+                            
                         </ul>
                         <ul>
                             <li><h3>shop</h3></li>
