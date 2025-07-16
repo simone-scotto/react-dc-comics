@@ -1,29 +1,9 @@
-const services = [{
-    id: 1,
-    src:"/img/buy-comics-digital-comics.png",
-    title:  "digital comics"
-}
-,{
-    id: 2,
-    src: `/img/buy-comics-merchandise.png`,
-    title:  "dc merchandise"
-},{
-    id: 3,
-    src:"/img/buy-comics-shop-locator.png",
-    title:  "subscription"
-},{
-    id: 4,
-    src:"/img/buy-comics-subscriptions.png",
-    title:  "digital comics"
-},{
-    id: 5,
-    src:"/img/buy-dc-power-visa.svg",
-    title:  "comic shop locator"
-}]
 
 
 import comics from "../db/comics"
+import services from "../db/services"
 import ComicCard from  "./ComicCard"
+import ServiceList from "./ServiceList";
 
 
 
@@ -36,7 +16,7 @@ export default function Main () {
     return (
         <main>
             <section className="jumbo ">
-                <span className="lable">current series</span>
+                <span className="lable text-uppercase">current series</span>
             </section>
             <section className="comics container">
                 <div className="row row-cols-6 g-4">
@@ -50,25 +30,19 @@ export default function Main () {
                     
                 </div>
 
-                <span className="card-lable">current series</span>
+                <button className=" card-btn text-uppercase">load more</button>
             </section>
         {/*     <TestComponents name= "simone">
 
 </TestComponents> */}
-            <section className="bg-primary">
+            <section className="services">
                 <div className="container">
-                    <ul className="services-list">
+                    <ul className="services-list text-uppercase">
                         
 
-                            {services.map(({id, src, title}) => (
-                                <li className="services-list-items" key={id}>
-                                    <a href="#">
-                                        <img src={src} alt="#" /> 
-                                        {title}
-                                    </a>
-
-                                </li>
-                            ))}
+                            {services.map(({id, src, title}) => {
+                                return <ServiceList key={id} src={src} title={title} />
+                            })}
                         </ul>                    
                     
                 </div>
@@ -79,7 +53,7 @@ export default function Main () {
                
                     <div className="closing-lists text-light">
                         <ul>
-                            <li><h3>dc comics</h3></li>
+                            <li><h4 className="text-uppercase">dc comics</h4></li>
                             <li>Characters</li>
                             <li>Comics</li>
                             <li>Movies</li>
@@ -90,12 +64,12 @@ export default function Main () {
                             
                         </ul>
                         <ul>
-                            <li><h3>shop</h3></li>
+                            <li><h4 className="text-uppercase">shop</h4></li>
                             <li>Shop DC</li>   
                             <li>Shop DC Collectibles</li>                   
                         </ul>
                         <ul>
-                            <li><h3>dc</h3></li>
+                            <li><h4 className="text-uppercase">dc</h4></li>
                             <li>Terms Of Use</li>
                             <li>Privacy Policy (New)</li>
                             <li>Ad Choiices</li>
@@ -109,7 +83,7 @@ export default function Main () {
                             <li>Contact Us</li>
                         </ul>
                         <ul>
-                            <li><h3>sites</h3></li>
+                            <li><h4 className="text-uppercase">sites</h4></li>
                             <li>DC</li>
                             <li>MAD Magazine</li>
                             <li>DC Kids</li>

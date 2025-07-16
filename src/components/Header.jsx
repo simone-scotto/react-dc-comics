@@ -9,8 +9,8 @@ export default function Header() {
                     <li className="nav-item ">
                         <a className="nav-link " href="#">Characters</a>
                     </li>
-                    <li className="nav-item border">
-                        <a className="nav-link active" href="#">Comics</a>
+                    <li className="nav-item ">
+                        <a className="nav-link " href="#">Comics</a>
                     </li>
                     <li className="nav-item ">
                         <a className="nav-link" href="#">Movies</a>

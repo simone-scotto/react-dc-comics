@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "open sans", sans-serif;
+    font-family: "Open sans", sans-serif;
 }
 
 
@@ -12,7 +12,12 @@
 a {
     color: white;
     text-decoration: none;
+    
+     
 }
+
+
+
 body {
     background-color: rgba(0, 0, 0, 0.882);
 }
@@ -40,6 +45,10 @@ h3 {
     color: currentColor
 }
 
+.nav-link:focus {
+    color: #0282F9;
+}
+
 /* main */
 .jumbo {
     
@@ -51,7 +60,7 @@ h3 {
 
     .lable {
         padding: 0.5rem 1rem;
-        background-color: blue;
+        background-color: #0282F9;
         color: white;
         position: absolute;
         top: 95%;
@@ -66,15 +75,24 @@ h3 {
 
 section.comics {
     padding: 4rem 0;
-}
-    .services-list {
-    list-style: none;
-    color: white;
-    padding: 3rem 0;
-    justify-content: space-between;
     display: flex;
-    width: 95%;
-    margin: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.services {
+    background-color: #0282F9;
+
+    .services-list {
+        list-style: none;
+        color: white;
+        padding: 3rem 0;
+        justify-content: space-between;
+        display: flex;
+        width: 95%;
+        margin: 0;
+        font-size: 0.8rem;
 
     
         
@@ -89,13 +107,9 @@ section.comics {
                     height: 55px;
                     /* height: 50px; */
                 }
-            
-        
-        
-            }
-    
-  
+        }
     }
+}
 
 
 .comic-card {
@@ -115,11 +129,12 @@ section.comics {
     }
 }
 
-.card-lable {
+.card-btn {
         margin-top: 5rem;
         padding: 0.5rem 1rem;
-        background-color: blue;
+        background-color: #0282F9;
         color: white;
+        border: none;
         
         
     }
@@ -136,15 +151,17 @@ section.comics {
         
         height: 100%;
         display: flex;
+        align-items: center;
         
 
         .closing-lists {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        font-size: 0.8rem;
         
-        height: 100%;
-        width: 100%
+        height: 70%;
+        width: 50%
         
         }
     }
@@ -172,7 +189,7 @@ section.comics {
 
     /* footer */
 footer {
-    background-color: gray;
+    background-color:#303030;
     height: 100px;
 
     .container {
@@ -182,7 +199,7 @@ footer {
         height: 100%;
 
         .sign-up {
-            border: 2px solid blue;
+            border: 2px solid #0282F9;
             padding: 0.5rem 1rem;
         }
 
@@ -191,6 +208,15 @@ footer {
             
             text-decoration: none;
             padding: 0 0.3rem;
+        }
+
+        .follow {
+            color: #0282F9;
+            font-weight: 700;
+        }
+
+        .social {
+            color:#797979;
         }
     }
 }
